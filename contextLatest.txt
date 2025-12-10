@@ -1,0 +1,17 @@
+[2025-12-10 12:29] - SQLITE REMOVAL FOR VERCEL COMPATIBILITY
+============================================================
+REASON: Vercel does not support SQLite databases (file-based storage).
+
+CHANGES MADE:
+1. Removed SQLite reference from root tsconfig.json
+2. Removed SQLite row from root README.md session storage table
+3. Deleted drizzle SQLite files:
+   - packages/apps/session-storage/shopify-app-session-storage-drizzle/src/adapters/drizzle-sqlite.adapter.ts
+   - packages/apps/session-storage/shopify-app-session-storage-drizzle/src/schemas/sqlite.schema.ts
+   - packages/apps/session-storage/shopify-app-session-storage-drizzle/src/__tests__/drizzle-sqlite.test.ts
+4. Updated drizzle package exports (drizzle.ts) - removed SQLite export
+5. Updated drizzle README.md - removed SQLite example and references
+6. Updated drizzle package.json - removed @types/better-sqlite3 and better-sqlite3 devDependencies
+
+NOTE: The physical shopify-app-session-storage-sqlite package folder did not exist (was only referenced in tsconfig.json).
+
