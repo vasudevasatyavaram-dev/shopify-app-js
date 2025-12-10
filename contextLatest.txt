@@ -15,3 +15,10 @@ CHANGES MADE:
 
 NOTE: The physical shopify-app-session-storage-sqlite package folder did not exist (was only referenced in tsconfig.json).
 
+[2025-12-10 13:21] - LOCKFILE REGENERATION COMPLETE
+====================================================
+Ran `pnpm install` to regenerate pnpm-lock.yaml.
+NOTE: Some sqlite/better-sqlite3 packages still appear as transitive dependencies 
+(from drizzle-orm peer deps and Prisma testing), but the direct SQLite dependencies 
+from the drizzle package have been removed.
+
